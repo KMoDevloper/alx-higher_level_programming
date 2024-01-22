@@ -1,0 +1,1 @@
+Welcome to the alx-higher_level_programming repository! This repository serves as the advanced stage of our foundation program, focusing on higher-level programming languages. In this repository, we delve into advanced concepts in C and take our first steps into the world of Python programming.
