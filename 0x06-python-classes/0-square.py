@@ -1,12 +1,6 @@
 #!/usr/bin/python3
-"""
-This is the 0-square.py module.
-It defines an empty class Square.
-"""
+"""A module for Square"""
 
 class Square:
-    """
-    This is the Square class.
-    It is currently empty.
-    """
+    """Represent a Square"""
     pass
