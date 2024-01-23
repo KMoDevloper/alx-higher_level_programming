@@ -11,11 +11,7 @@ class Square:
         Args:
             size (int): The size of the square (default is 0).
         """
-        self.__size = size
-        self.__validate_size()
 
-    def __validate_size(self):
-        """Validate the size attribute."""
         if not isinstance(self.__size, int):
             raise TypeError("Size must be an integer")
         elif self.__size < 0:
