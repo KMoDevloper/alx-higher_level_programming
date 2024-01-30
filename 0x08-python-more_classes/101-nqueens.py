@@ -44,3 +44,16 @@ def print_solutions(n):
 
     for solution in solutions:
         print(solution)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: ./101-nqueens.py N")
+        sys.exit(1)
+
+    try:
+        n = int(sys.argv[1])
+        print_solutions(n)
+    except ValueError:
+        print("N must be a number")
+        sys.exit(1)
