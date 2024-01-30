@@ -10,8 +10,8 @@ def is_safe(board, row, col, n):
     """Check if it's safe to place a queen in a given position"""
 
     for i in range(row):
-        if (board[i] == col or
-                board[i] - i == col - row or
+        if (board[i] == col or \
+                board[i] - i == col - row or \
                 board[i] + i == col + row):
             return False
 
