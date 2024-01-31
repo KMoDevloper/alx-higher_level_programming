@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+"""
+This module contains test cases for the matrix_divided function.
+"""
+
+from __future__ import print_function
+import doctest
+import sys
+import os
+
+sys.path.append(os.path.abspath('.'))
+matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+doctest.testfile("tests/2-matrix_divided.txt", verbose=True)
