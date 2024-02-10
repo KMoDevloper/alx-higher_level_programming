@@ -1,14 +1,33 @@
-#!/usr/bin/python3
-"""
-This module contains test cases for the matrix_divided function.
-"""
+# tests/0-add_integer.txt
 
-from __future__ import print_function
-import doctest
-import sys
-import os
+>>> from my_module import add_integer
 
-sys.path.append(os.path.abspath('.'))
-matrix_divided = __import__('2-matrix_divided').matrix_divided
+# Test case 1: Adding two integers
+>>> add_integer(1, 2)
+3
 
-doctest.testfile("tests/2-matrix_divided.txt", verbose=True)
+# Test case 2: Adding an integer and a negative integer
+>>> add_integer(100, -2)
+98
+
+# Test case 3: Adding an integer and using the default value for b
+>>> add_integer(2)
+100
+
+# Test case 4: Adding a float and a negative integer
+>>> add_integer(100.3, -2)
+98
+
+# Test case 5: Attempting to add an integer and a string
+>>> try:
+...     add_integer(4, "School")
+... except Exception as e:
+...     print(e)
+b must be an integer
+
+# Test case 6: Attempting to add None
+>>> try:
+...     add_integer(None)
+... except Exception as e:
+...     print(e)
+a must be an integer

@@ -1,23 +1,31 @@
 #!/usr/bin/python3
 """
 This module contains a function that divides all elements of a matrix.
+
+:param a: The first integer.
+:param b: The second integer (default is 98).
+:return: The sum of a and b.
+:raises TypeErroor: If a or b is not an integer or float.
 """
 
 
+def add_integer(a, b=98):
+    """
+    Add two integers.
 
-def matrix_divided(matrix, div):
-    if not all(isinstance(row, list) and all(isinstance(num, (int, float)) for num in row) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    if not all(len(row) == len(matrix[0]) for row in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
+    :param a: The first integer.
+    :param b: The second integer (default is 98).
+    :return: The sum of a and b.
+    :raises TypeError: If a or b is not an integer or float.
+    """
 
-    if not isinstance(div, (int, float)):
-        raise TypeError("div must be a number")
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
+    if type(a) not in (int, float):
+        raise TypeError("a must be an integer")
 
+    if type(b) not in (int, float):
+        raise TypeError("b must be an integer")
 
-    new_matrix = [[round(num / div, 2) for num in row] for row in matrix]
+    a = int(a)
+    b = int(b)
 
-
-    return new_matrix
+    return a + b
